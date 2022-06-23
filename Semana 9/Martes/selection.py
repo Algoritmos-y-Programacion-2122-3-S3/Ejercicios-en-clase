@@ -1,15 +1,16 @@
 def main():
-    lista = [3,5,7,1,4,8,9,2,6,3]
-    print(lista)
-    for i in range(len(lista)): #1
-        menor = i #7
-        for j in range(i+1,len(lista)): #2
-            if lista[j] < lista[menor]:
-                menor = j 
-        temp = lista[i] #5
-        lista[i] = lista[menor] #
-        lista[menor] = temp 
+    lista = [3,5,7,1,4,8,9,2,6,3]#1
+    for i in range(len(lista)): # n
+        menor = i #n
+        for j in range(i+1,len(lista)): #n2
+            if lista[j] < lista[menor]:#n2
+                menor = j #n2
+        temp = lista[i] #n
+        lista[i] = lista[menor] #n
+        lista[menor] = temp#n 
 
-    print(lista)
+    print(lista)#1
+
+    #2+5n+3n2 = O(n2)
 
 main()
